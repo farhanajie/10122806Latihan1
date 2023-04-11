@@ -538,6 +538,7 @@ Kelas: IF-6
                     android:background="@drawable/button_green"
                     android:text="@string/buat_laporan"
                     style="@style/button"
+                    android:layout_marginBottom="@dimen/x"
                     />
 
             </LinearLayout>
