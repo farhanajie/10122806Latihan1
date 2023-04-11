@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/x2"
+    android:background="@color/background_gray"
+    android:contentDescription="@string/app_name"
+    tools:context=".MainActivity">
+
+    <!-- CONTAINER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- DIGITEAM -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/x3"
+            android:layout_marginBottom="@dimen/x3"
+            android:background="@drawable/rounded_corners_green">
+
+            <ImageView
+                android:layout_width="@dimen/x6"
+                android:layout_height="@dimen/x6"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/logo_1"
+                android:contentDescription="@string/digiteam_title"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/digiteam_title"
+                    android:textAppearance="@style/digiteam_title"
+                    android:layout_marginBottom="@dimen/x0.5"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/digiteam_subtitle_1"
+                    android:textAppearance="@style/digiteam_lato_subtitle"
+                    android:layout_marginBottom="@dimen/x0.5"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/digiteam_subtitle_2"
+                    android:textAppearance="@style/digiteam_lato_subtitle"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- PROFIL -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/x3">
+            
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/foto"
+                app:shapeAppearanceOverlay="@style/circular_img"
+                android:layout_marginEnd="@dimen/x"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textAppearance="@style/digiteam_title"
+                    android:layout_marginBottom="@dimen/x0.25"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/job"
+                    android:textAppearance="@style/digiteam_subtitle"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- JAM KERJA -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardView.Light"
+            android:layout_marginBottom="@dimen/x3">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jam_kerja_title"
+                    android:textAppearance="@style/card_title"
+                    android:layout_marginBottom="@dimen/x2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jam_kerja_angka"
+                    android:textAppearance="@style/blue_text"
+                    android:layout_marginBottom="@dimen/x"
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x">
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:progressDrawable="@drawable/progress_bar"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|start"
+                        android:text="@string/total_jam"
+                        android:textAppearance="@style/progress_bar_text"
+                        android:layout_marginStart="@dimen/x"
+                        />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical|end"
+                        android:src="@drawable/clock"
+                        android:contentDescription="@string/total_jam"
+                        android:layout_marginEnd="@dimen/x"
+                        />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/batas_minimum"
+                    android:textAppearance="@style/small_lato_text"
+                    android:layout_marginBottom="@dimen/x3"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_green"
+                    android:text="@string/checkin"
+                    style="@style/button"
+                    android:layout_marginBottom="@dimen/x"
+                    />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- LAPORAN KAMU -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardView.Light"
+            android:layout_marginBottom="@dimen/x3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/laporan_kamu_title"
+                    android:textAppearance="@style/card_title"
+                    android:layout_marginBottom="@dimen/x2"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/x3">
+
+                    <!-- Maret -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="@dimen/x2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/maret"
+                            android:textAppearance="@style/month_text"
+                            android:layout_marginBottom="@dimen/x"
+                            />
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rowCount="7"
+                            android:columnCount="5">
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_very_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_very_light_green"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_very_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+
+                        </GridLayout>
+
+                    </LinearLayout>
+
+                    <!-- April -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/april"
+                            android:textAppearance="@style/month_text"
+                            android:layout_marginBottom="@dimen/x"
+                            />
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rowCount="6"
+                            android:columnCount="5">
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_light_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_medium_green"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_dark_green"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_gray"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_gray"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_gray"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_gray"
+                                />
+
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_gray"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_gray"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_gray"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_gray"
+                                />
+                            <View
+                                style="@style/calendar"
+                                android:background="@drawable/calendar_gray"
+                                />
+
+                        </GridLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_green"
+                    android:text="@string/buat_laporan"
+                    style="@style/button"
+                    />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        
+        <!-- BOTTOM ICONS -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/izin"
+                android:textAppearance="@style/icon_text"
+                app:drawableTopCompat="@drawable/people_waiting"
+                android:drawablePadding="@dimen/x"
+                android:layout_marginBottom="@dimen/x4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/kehadiran"
+                android:textAppearance="@style/icon_text"
+                app:drawableTopCompat="@drawable/people"
+                android:drawablePadding="@dimen/x"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/laporan"
+                android:textAppearance="@style/icon_text"
+                app:drawableTopCompat="@drawable/book"
+                android:drawablePadding="@dimen/x"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/agenda"
+                android:textAppearance="@style/icon_text"
+                app:drawableTopCompat="@drawable/calendar"
+                android:drawablePadding="@dimen/x"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/booking"
+                android:textAppearance="@style/icon_text"
+                app:drawableTopCompat="@drawable/book"
+                android:drawablePadding="@dimen/x"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/wiki"
+                android:textAppearance="@style/icon_text"
+                app:drawableTopCompat="@drawable/wiki"
+                android:drawablePadding="@dimen/x"
+                />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>
